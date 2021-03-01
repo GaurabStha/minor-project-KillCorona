@@ -1,0 +1,104 @@
+<style>
+    @media only screen and (max-width: 700px){
+        #centerBanako{
+            margin-left: 25%;
+        }
+    }
+    @media only screen and (max-width: 570px){
+        #centerBanako{
+            margin-left: 0;
+        }
+    }
+</style>
+
+<div style="margin-top: 80px;">
+    <div class="alert-danger">
+        {{error}}
+    </div>
+    <div class="col-sm-6 col-md-6 offset-3" id="centerBanako">
+        <!-- Material form register -->
+        <div class="card">
+            <h5 class="card-header danger-color white-text text-center py-4">
+                <strong>Blood & Plasma Donor Registration</strong>
+            </h5>
+
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+                <!-- Form -->
+                <form class="text-center" style="color: #757575;" action="/donorForm" method="POST" >
+                    {{#if messages.error }}
+                        <h5 class="display-6 font-weight-500 text-center alert-danger" style="color: red; padding: 5px 0 5px 0; letter-spacing: 1px; border-radius: 10px; margin-top: 10px;">
+                            {{messages.error}}
+                        </h5>
+                    {{/if}}
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- Username -->
+                            <div class="md-form">
+                                <input type="text" id="materialRegisterFormUsername" class="form-control" name="username">
+                                <label for="materialRegisterFormUserame">Username</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- Address -->
+                            <div class="md-form">
+                                <input type="text" id="materialRegisterFormAddress" class="form-control" name="address">
+                                <label for="materialRegisterFormAddress">Address</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form">
+                                <input type="text" id="materialRegistePhoneno" class="form-control" name="phone">
+                                <label for="materialRegisterFormPhoneno">Phone no.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form">
+                                <label for="materialRegisterFormBloodGroup">Blood Group.</label>
+                                <br>
+                                <br>
+                                <select class="form-control" id="sel1" name="bloodGroup">
+                                    <option value="">Choose:-</option>
+                                    <option value="A+">A +ve</option>
+                                    <option value="A-">A -ve</option>
+                                    <option value="B+">B +ve</option>
+                                    <option value="B-">B -ve</option>
+                                    <option value="O+">O +ve</option>
+                                    <option value="O-">O -ve</option>
+                                    <option value="AB+">AB +ve</option>
+                                    <option value="AB-">AB -ve</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form">
+                                <label for="materialRegisterFormPhoneno">Are you a Corona Cured Person?</label>
+                                <br>
+                                <br>
+                                <select class="form-control" id="sel" name="coronaCured">
+                                    <option value="">Choose:-</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-danger btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" style="font-size: 15px;">Be Donor</button>
+                </form>
+                <!-- Form -->
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>

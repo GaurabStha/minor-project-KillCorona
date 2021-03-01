@@ -1,0 +1,103 @@
+.nav-item .nav-link {
+    font-size: large;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.info,
+.flex {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.cases,
+.active-cases,
+.deaths,
+.recovered {
+    padding-top: 7px;
+    color: white;
+    height: 100px;
+    width: 300px;
+    margin: 0 50px 0 50px;
+    border-radius: 10px;
+}
+
+.cases {
+    background: rgb(192, 192, 23);
+}
+
+.recovered {
+    background: green;
+}
+
+.deaths {
+    background: red;
+}
+
+.active-cases {
+    background: brown;
+}
+
+@media only screen and (max-width: 1400px) {
+    .info,
+    .flex {
+        justify-content: center;
+        padding-top: 10px;
+    }
+    .cases,
+    .active-cases,
+    .deaths,
+    .recovered {
+        margin-bottom: 20px;
+        height: 100px;
+        width: 250px;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .info,
+    .flex {
+        display: grid;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    .cases,
+    .active-cases,
+    .deaths,
+    .recovered {
+        margin-bottom: 20px;
+        height: 90px;
+        width: 300px;
+        border-radius: 10px;
+    }
+}
+
+.row {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    float: left;
+}
+
+.card {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+form:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}

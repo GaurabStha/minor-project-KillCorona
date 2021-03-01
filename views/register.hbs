@@ -1,0 +1,86 @@
+<style>
+    @media only screen and (max-width: 700px){
+        #centerBanako{
+            margin-left: 25%;
+        }
+    }
+    @media only screen and (max-width: 570px){
+        #centerBanako{
+            margin-left: 0;
+        }
+    }
+</style>
+
+<div class="col-sm-6 col-md-6 offset-3" id="centerBanako">
+        <!-- Material form register -->
+        <div class="card">
+
+            <h5 class="card-header danger-color white-text text-center py-4">
+                <strong>Registration</strong>
+            </h5>
+            <br>
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+                <!-- Form -->
+                <form class="text-center" style="color: #757575;" action="/register" method="POST">
+                {{#if messages.error }}
+                    <h5 class="display-6 font-weight-500 text-center alert-danger" style="color: red; padding: 5px 0 5px 0; letter-spacing: 1px; border-radius: 10px;">
+                        {{messages.error}}
+                    </h5>
+                {{/if}}
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- Username -->
+                            <div class="md-form">
+                                <input type="text" id="materialRegisterFormUsername" class="form-control" name="username" value="{{ messages.username}}">
+                                <label for="materialRegisterFormUserame">Username</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- Email -->
+                            <div class="md-form">
+                                <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" value="{{ messages.email}}">
+                                <label for="materialRegisterFormEmail">E-mail</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- Password -->
+                            <div class="md-form">
+                                <input type="password" id="materialRegisterFormPassword" class="form-control" name="password">
+                                <label for="materialRegisterFormPassword">Password</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- Confirm Password -->
+                            <div class="md-form">
+                                <input type="password" id="materialRegisterConfirmFormPassword" class="form-control" name="confirmpassword">
+                                <label for="materialRegisterFormPassword">Confirm Password</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" style="font-size: 15px">Sign Up</button>
+                </form>
+                <!-- Form -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="container2">
+        <!-- Jumbotron -->
+        <div class="jumbotron text-center grey darken-3 white-text mx-2 mb-5">
+            <!-- Title -->
+            <h2 class="card-title h2">Wanna Donate Blood??</h2>
+            <div class="pt-2">
+                <button type="button" class="btn btn-danger btn-rounded"><a href="./donorForm" style="color: white; font-size: 15px">Be a Donor.</a></button>
+            </div>
+            <hr class="my-4 rgba-white-light">
+        </div>
+        <!-- Jumbotron -->
+    </div>

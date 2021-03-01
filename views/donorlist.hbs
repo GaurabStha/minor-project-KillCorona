@@ -1,0 +1,42 @@
+<div style="margin-top: 80px;">
+    <div class="container mt-3">
+        <h2 style="color: black">Blood and Plasma Donor List</h2>
+        <p>Type something in the input field to search the table for address or blood group.</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered" style="color: black; font-size: bold;">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Phone No.</th>
+                    <th>Blood Group</th>
+                    <th>Covid Cured</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                {{#each list}}
+                <tr>
+                    <td>{{this.username}}</td>
+                    <td>{{this.address}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.bloodGroup}}</td>
+                    <td>{{this.coronaCured}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <br>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
