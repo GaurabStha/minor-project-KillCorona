@@ -8,12 +8,12 @@ const guest = require('../middlewares/guest');
 /* GET login page. */
 router.get('/login', function(req, res, next) {
     res.render('login');
-}, guest);
+});
 
 /* GET register page. */
 router.get('/register', function(req, res) {
     res.render('register');
-}, guest);
+});
 
 // POST register data
 router.post('/register', async function(req, res, next) {
@@ -67,7 +67,7 @@ router.post('/register', async function(req, res, next) {
 
     user.save()
         .then((user) => {
-            return res.redirect('/');
+            return res.redirect('/login');
         }).catch((err) => {
             req.flash('error', 'Something went wrong.');
             return res.redirect('/register');
